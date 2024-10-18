@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class KakaoPayController {
 
     private final KakaoPayService kakaoPayService;
-   // private final OrderService orderService;
+
     @GetMapping("/ready/{orderId}")
     public ResponseEntity<?> getRedirectUrl(@PathVariable Long orderId) throws Exception {
         return ResponseEntity.status(HttpStatus.OK)
@@ -37,6 +37,12 @@ public class KakaoPayController {
        // orderService.deleteOrder(orderId);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(cancelResDto);
+    }
+
+    @GetMapping("")
+    public String testconnection(){
+          return "OK";
+
     }
 
 }
