@@ -10,7 +10,7 @@ public class CORSConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // 모든 경로에 대해
-            .allowedOrigins("http://15.165.174.43:8081","http://15.165.174.43:8082","https://back.son7shop.com") // 허용할 오리진
+            .allowedOrigins("http://15.165.174.43:8081","http://15.165.174.43:8082","https://son7shop.com") // 허용할 오리진
             .allowedMethods("GET", "POST", "PUT", "DELETE") // 허용할 HTTP 메소드
             .allowedHeaders("*") // 허용할 헤더
             .allowCredentials(true) // 쿠키를 포함할지 여부
